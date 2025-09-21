@@ -1,0 +1,25 @@
+    name: Run Python Script
+
+    on: [push] # Trigger on every push to the repository
+
+    jobs:
+      build-and-run:
+        runs-on: ubuntu-latest # Specify the operating system for the runner
+
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v4 # Action to check out your repository's code
+
+          - name: Set up Python
+            uses: actions/setup-python@v5 # Action to set up a specific Python version
+            with:
+              python-version: '3.13' # Specify the desired Python version
+
+          - name: Install dependencies (if any)
+            run: |
+              python -m pip install --upgrade pip
+              pip install -r requirements.txt # Install packages from requirements.txt
+
+          - name: Run Python script
+            run: |
+              python passwordprojectsimpler.py # Execute your Python script
