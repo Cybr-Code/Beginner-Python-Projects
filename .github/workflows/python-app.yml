@@ -39,4 +39,4 @@ jobs:
         pytest
     - name: Run specific Python file
       run: |
-        python your_script.py # Replace 'your_script.py' with the actual file name
+        python passwordprojectsimpler.py
