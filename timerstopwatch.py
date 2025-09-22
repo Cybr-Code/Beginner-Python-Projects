@@ -1,7 +1,6 @@
 import time
 import os
 import sys
-import winsound
 
 print("Timer / Stopwatch")
 while True:
@@ -48,7 +47,7 @@ def timer():
                     hours = hours - 1
                 elif hours == 0:
                     while True:
-                        winsound.Beep(1000, 1000)
+                        os.system("say beep")
                         print("Time's Up!")
                     break
 
