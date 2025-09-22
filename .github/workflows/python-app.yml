@@ -39,4 +39,4 @@ jobs:
         pytest
     - name: Run specific Python file
       run: |
-        python passwordprojectsimpler.py
+        python anotherpass.py
